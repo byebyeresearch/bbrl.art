@@ -4,9 +4,6 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/byebyeresearch/bbrl.art-content.git
-[submodule "site/bbrl.art-accounts"]
-	path = site/bbrl.art-accounts
-	url = https://github.com/byebyeresearch/bbrl.art-accounts
 [submodule "site/accounts"]
 	path = site/accounts
-	url = https://github.com/byebyeresearch/bbrl.art-accounts
+	url = https://github.com/byebyeresearch/bbrl.art-accounts.git
