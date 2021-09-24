@@ -32,6 +32,8 @@ Icon
 /site/cache/*
 !/site/cache/index.html
 
+/site/cache/*/tristanb/
+
 # Accounts
 # ---------------
 

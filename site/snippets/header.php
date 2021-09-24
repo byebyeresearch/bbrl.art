@@ -37,6 +37,7 @@
     'assets/css/prism.css',
     'assets/css/lightbox.css',
     'assets/css/index.css',
+    'assets/css/shopify.css',
     '@auto'
   ]) ?>
 
@@ -51,36 +52,27 @@
 </head>
 <body>
 
-  <header class="header">
-    <?php
-    /*
-      We use `$site->url()` to create a link back to the homepage
-      for the logo and `$site->title()` as a temporary logo. You
-      probably want to replace this with an SVG.
-    */
-    ?>
-    <a class="logo" href="<?= $site->url() ?>">
-      <?= $site->title()->html() ?>
-    </a>
+  <header class="main-header" id="main-header">
+    <h1>
+      <a class="logo" href="<?= $site->url() ?>">
+        <?= $site->title()->html() ?>
+      </a>
+    </h1>
+    
+    <span hidden id="menu-label">Main menu</span>
+    <button class="menu-toggle" id="menu-toggle" aria-labelledby="menu-label" aria-expanded="false">☰</button>
 
-    <nav class="menu">
-      <?php
-      /*
-        In the menu, we only fetch listed pages,
-        i.e. the pages that have a prepended number
-        in their foldername.
+    <nav class="menu" aria-labelledby="menu-label" id="menu">
 
-        We do not want to display links to unlisted
-        `error`, `home`, or `sandbox` pages.
+      <ul>
+        <?php foreach ($site->children()->listed() as $item): ?>
+          <li><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
+        <?php endforeach ?>
+        
+        <li data-cart></li>
 
-        More about page status:
-        https://getkirby.com/docs/reference/panel/blueprints/page#statuses
-      */
-      ?>
-      <?php foreach ($site->children()->listed() as $item): ?>
-      <a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
-      <?php endforeach ?>
-      <?php snippet('social') ?>
+        <!-- <?php snippet('social') ?> -->
+      </ul>
     </nav>
   </header>
 
