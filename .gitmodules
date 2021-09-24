@@ -7,3 +7,12 @@
 [submodule "site/accounts"]
 	path = site/accounts
 	url = https://github.com/byebyeresearch/bbrl.art-accounts.git
+[submodule "site/plugins/kirby-shopify"]
+	path = site/plugins/kirby-shopify
+	url = https://github.com/tristantbg/kirby-shopify.git
+[submodule "site/plugins/kirby-locked-pages"]
+	path = site/plugins/kirby-locked-pages
+	url = https://github.com/johannschopplich/kirby-locked-pages.git
+[submodule "site/plugins/kirby-link-field"]
+	path = site/plugins/kirby-link-field
+	url = https://github.com/OblikStudio/kirby-link-field.git
