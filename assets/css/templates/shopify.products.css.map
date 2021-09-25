@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAoC;EAC3D,QAAQ,EAAE,sBAAsB;CAKjC;;AARD,AAKE,SALO,CAKP,EAAE,CAAC;EACD,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "shopify.products.scss"
+    ],
+    "names": [],
+    "file": "shopify.products.css"
+}

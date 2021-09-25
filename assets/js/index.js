@@ -26,22 +26,47 @@ menuToggle.addEventListener("click", function(event) {
 });
 
 
+// Header On Scroll
+var heroHeight = 0;
 
-var heroHeight = $(window).height();
+if (document.querySelector("#hero")) {
+  heroHeight = $(document.querySelector("#hero")).height();
+}
+
 var mainHeader = document.querySelector("#main-header");
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-var mainHeaderHidden = mainHeader.classList.contains("is-hidden");
+  var currentScrollPos = window.pageYOffset;
+  var mainHeaderHidden = mainHeader.classList.contains("is-hidden");
 
-  if (prevScrollpos < currentScrollPos) {
-    $(mainHeader).removeClass("is-visible").addClass("is-hidden");
-    
-  } else if (mainHeaderHidden & prevScrollpos > currentScrollPos & document.documentElement.scrollTop > heroHeight || document.documentElement.scrollTop <= 0) {
-    $(mainHeader).removeClass("is-hidden").addClass("is-visible");
+  if (prevScrollpos < currentScrollPos) { //SCROLL DOWN
+
+    if (currentScrollPos < heroHeight) { //INSIDE HERO
+
+      $(mainHeader).removeClass("is-visible").addClass("is-hidden");
+
+    } else if (currentScrollPos > heroHeight){ //OUTSIDE HERO
+
+      $(mainHeader).removeClass("is-visible").addClass("is-hidden");
+
+    }
+
+  } else if (prevScrollpos > currentScrollPos) { //SCROLL UP
+
+    if (currentScrollPos < heroHeight) { //INSIDE HERO
+
+      $(mainHeader).addClass("static");
+
+    } else if (currentScrollPos > heroHeight){ //OUTSIDE HERO
+
+      $(mainHeader).removeClass("static");
+      $(mainHeader).removeClass("is-hidden").addClass("is-visible");
+      
+    }
+
   }
+
   prevScrollpos = currentScrollPos;
-  console.log(mainHeaderHidden)
 };
 

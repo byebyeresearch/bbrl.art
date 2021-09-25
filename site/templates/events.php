@@ -36,7 +36,7 @@
 <?php endif ?>
 
 <?php if (empty($tag) === false): ?>
-<ul class="grid">
+<ul class="events">
   <?php foreach ($events as $event): ?>
   <li class="column" style="--columns: 4">
       <?php snippet('event', ['event' => $event, 'excerpt' => false]) ?>
@@ -46,9 +46,9 @@
 <?php endif ?>
 
 <?php if (empty($tag) === true): ?>
-<ul class="grid">
+<ul class="events">
   <?php foreach ($upcomingevents as $event): ?>
-  <li class="column" style="--columns: 4">
+  <li>
       <?php snippet('event', ['event' => $event, 'excerpt' => false]) ?>
   </li>
   <?php endforeach ?>
@@ -57,9 +57,9 @@
 <header class="h1">
   <h1>Past Events</h1>
 </header>
-<ul class="grid">
+<ul class="events">
   <?php foreach ($pastevents as $event): ?>
-  <li class="column" style="--columns: 4">
+  <li>
       <?php snippet('event', ['event' => $event, 'excerpt' => false]) ?>
   </li>
   <?php endforeach ?>

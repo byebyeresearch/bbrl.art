@@ -34,10 +34,11 @@
   */
   ?>
   <?= css([
+    'assets/css/index.css',
     'assets/css/prism.css',
     'assets/css/lightbox.css',
-    'assets/css/index.css',
     'assets/css/shopify.css',
+    'assets/css/flickity.min.css',
     '@auto'
   ]) ?>
 
@@ -49,14 +50,16 @@
   */
   ?>
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
+  
 </head>
 <body>
 
-  <header class="main-header" id="main-header">
+  <header class="main-header is-visible static" id="main-header">
     <h1>
       <a class="logo" href="<?= $site->url() ?>">
         <?= $site->title()->html() ?>
       </a>
+      
     </h1>
     
     <span hidden id="menu-label">Main menu</span>
@@ -77,3 +80,4 @@
   </header>
 
   <main class="main">
+  <div id="hero"></div>

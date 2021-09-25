@@ -21,7 +21,7 @@
 <?php snippet('header') ?>
 
 <article>
-  <div class="product-images">
+  <div class="product-images" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
 
     <?php foreach ($page->shopifyImages()->toStructure() as $image): ?>
       <a href="<?= $image->src()->img_url('1000x') ?>" data-lightbox>

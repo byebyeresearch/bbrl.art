@@ -1,0 +1,28 @@
+.product-images {
+  background: #EEE;
+  margin-bottom: calc(var(--padding)*1.5);
+}
+
+.product-images img {
+  display: block;
+  height: 200px;
+  width: auto;
+}
+
+@media (min-width: 426px) {
+  .product-images img {
+    height: 400px;
+    width: auto;
+  }
+}
+
+.flickity-slider a[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+@media (min-width: 426px) {
+  .flickity-slider a[aria-hidden="true"] {
+    pointer-events: visible;
+  }
+}
+/*# sourceMappingURL=shopify.product.css.map */

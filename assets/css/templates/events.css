@@ -1,0 +1,12 @@
+.events {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: calc(var(--padding)/2);
+}
+
+.events li {
+  list-style: none;
+}
+/*# sourceMappingURL=events.css.map */

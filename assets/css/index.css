@@ -33,20 +33,17 @@ html {
   font-family: var(--font-family-mono);
   color: var(--color-text);
   background: var(--color-background);
+  overflow-x: hidden;
 }
 
 html.scrollable {
   overflow: hidden;
 }
 
-@media (min-width: 426px) {
-  html {
-    overflow-x: hidden;
-  }
-}
-
 body {
   margin-top: 4.5rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 img {
@@ -142,8 +139,6 @@ header.main-header {
   display: -ms-flexbox;
   display: flex;
   background-color: var(--color-white);
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -158,10 +153,21 @@ header.main-header h1 {
 
 header.main-header.is-hidden {
   top: -4.5rem;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 header.main-header.is-visible {
   top: 0;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+header.main-header.static {
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0 !important;
+  transition: 0 !important;
 }
 
 @media (min-width: 426px) {
@@ -186,5 +192,11 @@ button {
 
 .is-inline.shopify-buy__cart-toggle button > * {
   display: inline-block;
+}
+
+#hero {
+  display: block;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 }
 /*# sourceMappingURL=index.css.map */

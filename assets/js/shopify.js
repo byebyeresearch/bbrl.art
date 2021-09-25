@@ -1,4 +1,4 @@
-let App = function (productId = null, productPrice = null) {
+let App = function (productId = null, productPrice = null, shopifyShopUrl = null, shopifyAccessToken = null) {
 
   // Launch the shopify library
   if (window.ShopifyBuy && window.ShopifyBuy.UI) {
@@ -8,8 +8,8 @@ let App = function (productId = null, productPrice = null) {
   // Initialize the buy button
   function ShopifyBuyInit() {
     var client = ShopifyBuy.buildClient({
-      domain: 'timstaana.myshopify.com',
-      storefrontAccessToken: '02774a0d1d9940eb1dbb6e6f61801fba',
+      domain: shopifyShopUrl,
+      storefrontAccessToken: shopifyAccessToken,
     });
 
     // Set up the button

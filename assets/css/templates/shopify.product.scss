@@ -1,0 +1,25 @@
+@import '../include-media'; $breakpoints: (phone: 425px, tablet: 768px, desktop: 1024px);
+
+.product-images {
+  background: #EEE;
+  margin-bottom: calc(var(--padding)*1.5);
+  img {
+    display: block;
+    height: 200px;
+    width: auto;
+
+    @include media(">phone") {
+      height: 400px;
+      width: auto;
+     }
+     
+  }
+}
+
+.flickity-slider a[aria-hidden="true"] {
+  pointer-events: none;
+
+  @include media(">phone") {
+    pointer-events: visible;
+   }
+}
