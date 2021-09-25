@@ -46,9 +46,9 @@
   <?= js([
     'assets/js/prism.js',
     'assets/js/lightbox.js',
-    'assets/js/index.js',
     'assets/js/shopify.js',
     'assets/js/flickity.min.js',
+    'assets/js/index.js',
     '@auto'
   ]) ?>
 
