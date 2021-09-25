@@ -16,9 +16,6 @@
 [submodule "site/plugins/kirby-link-field"]
 	path = site/plugins/kirby-link-field
 	url = https://github.com/OblikStudio/kirby-link-field.git
-[submodule "site/plugins/site/plugins/kirby3-dotenv"]
-	path = site/plugins/site/plugins/kirby3-dotenv
-	url = https://github.com/bnomei/kirby3-dotenv.git
 [submodule "site/plugins/kirby3-dotenv"]
 	path = site/plugins/kirby3-dotenv
 	url = https://github.com/bnomei/kirby3-dotenv.git
