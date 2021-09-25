@@ -20,7 +20,7 @@
 ?>
 <?php snippet('header') ?>
 
-  <div id="hero" <?php if ($cover = $page->cover()): ?>style="background-image:url('<?= $cover->resize(1024, 1024)->url() ?>')"<?php endif ?>></div>
+  <?php if ($cover = $page->cover()): ?><div id="hero" style="background-image:url('<?= $cover->resize(1024, 1024)->url() ?>')"></div><?php endif ?>
 
   <?php snippet('intro') ?>
   <?php

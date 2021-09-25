@@ -54,7 +54,7 @@
 </head>
 <body>
 
-  <header class="main-header static" id="main-header">
+  <header class="main-header<?php if($page->cover()->isNotEmpty()): ?> static<?php endif ?>" id="main-header">
     <h1>
       <a class="logo" href="<?= $site->url() ?>">
         <?= $site->title()->html() ?>
