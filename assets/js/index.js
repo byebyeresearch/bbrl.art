@@ -42,26 +42,19 @@ window.onscroll = function() {
 
   if (prevScrollpos < currentScrollPos) { //SCROLL DOWN
 
-    if (currentScrollPos < heroHeight) { //INSIDE HERO
-
-      $(mainHeader).removeClass("is-visible").addClass("is-hidden");
-
-    } else if (currentScrollPos > heroHeight){ //OUTSIDE HERO
-
-      $(mainHeader).removeClass("is-visible").addClass("is-hidden");
-
-    }
+    $(mainHeader).addClass("is-hidden");
 
   } else if (prevScrollpos > currentScrollPos) { //SCROLL UP
 
     if (currentScrollPos < heroHeight) { //INSIDE HERO
 
       $(mainHeader).addClass("static");
+      $(mainHeader).removeClass("is-hidden");
 
     } else if (currentScrollPos > heroHeight){ //OUTSIDE HERO
 
       $(mainHeader).removeClass("static");
-      $(mainHeader).removeClass("is-hidden").addClass("is-visible");
+      $(mainHeader).removeClass("is-hidden");
       
     }
 

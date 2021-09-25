@@ -19,6 +19,9 @@
 */
 ?>
 <?php snippet('header') ?>
+
+  <div id="hero" <?php if ($cover = $page->cover()): ?>style="background-image:url('<?= $cover->resize(1024, 1024)->url() ?>')"<?php endif ?>></div>
+
   <?php snippet('intro') ?>
   <?php
   /*
@@ -26,7 +29,7 @@
     prevent errors in case the page was deleted or renamed before
     we call a method like `children()` in this case
   */
-  ?>
+  ?>  
   <?php if ($photographyPage = page('photography')): ?>
   <ul class="home-grid">
     <?php foreach ($photographyPage->children()->listed() as $album): ?>

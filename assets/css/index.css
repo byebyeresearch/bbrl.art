@@ -41,13 +41,83 @@ html.scrollable {
 }
 
 body {
-  margin-top: 4.5rem;
   overflow-x: hidden;
   width: 100vw;
 }
 
 img {
   width: 100%;
+}
+
+nav a {
+  display: block;
+}
+
+header.main-header {
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+  padding: 0 calc(var(--padding)/2);
+}
+
+header.main-header h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header.main-header a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+header.main-header.static {
+  background-color: transparent;
+  position: absolute;
+  z-index: 101;
+}
+
+header.main-header.static a.logo {
+  color: var(--color-white);
+}
+
+@media (min-width: 426px) {
+  header.main-header.static {
+    background-color: transparent;
+  }
+  header.main-header.static a {
+    color: var(--color-white);
+  }
+}
+
+header.main-header.is-hidden {
+  top: -4.5rem;
+}
+
+.menu-toggle {
+  position: relative;
+  z-index: 2000;
+  width: calc(var(--padding)*2);
+  height: calc(var(--padding)*2);
+}
+
+@media (min-width: 426px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
 .menu {
@@ -59,6 +129,7 @@ img {
   height: 100vh;
   max-height: -webkit-fill-available;
   background-color: var(--color-white);
+  color: var(--color-black);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,6 +140,10 @@ img {
   padding: var(--padding);
   -webkit-transition: left 0.3s;
   transition: left 0.3s;
+}
+
+.menu.active {
+  left: 0;
 }
 
 .menu ul li {
@@ -91,6 +166,8 @@ img {
     display: block;
     position: static;
     width: auto;
+    background-color: transparent;
+    padding-right: 0;
   }
   .menu > ul {
     display: -webkit-box;
@@ -107,73 +184,8 @@ img {
   }
 }
 
-.menu-toggle {
-  position: relative;
-  z-index: 2000;
-  width: calc(var(--padding)*2);
-  height: calc(var(--padding)*2);
-}
-
-@media (min-width: 426px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-nav a {
-  display: block;
-}
-
-.menu.active {
-  left: 0;
-}
-
-header.main-header {
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  height: 4.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: var(--color-white);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 calc(var(--padding)/2);
-}
-
-header.main-header h1 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-header.main-header.is-hidden {
-  top: -4.5rem;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
-}
-
-header.main-header.is-visible {
-  top: 0;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
-}
-
-header.main-header.static {
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0 !important;
-  transition: 0 !important;
-}
-
-@media (min-width: 426px) {
-  header.main-header {
-    background-color: var(--color-white);
-  }
+main > :first-child {
+  padding-top: 4.5rem;
 }
 
 button {
@@ -198,5 +210,8 @@ button {
   display: block;
   height: 100vh;
   max-height: -webkit-fill-available;
+  background-color: var(--color-code-red);
+  position: relative;
+  z-index: 100;
 }
 /*# sourceMappingURL=index.css.map */
