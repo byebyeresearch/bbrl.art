@@ -13,8 +13,8 @@ return [
 
     // config will use default settings to load the env file
     'bnomei.dotenv.dir' => function (): string {
-        return kirby()->roots()->index();
-        // return realpath(kirby()->roots()->index() . '/../site/plugins/kirby-shopify/'); // public folder setup
+        // return kirby()->roots()->index();
+        return realpath(kirby()->roots()->index() . '/../site/plugins/kirby-shopify/'); // public folder setup
     },
     // 'bnomei.dotenv.file' => '.env',
     // 'bnomei.dotenv.required' => [],

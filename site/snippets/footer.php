@@ -44,9 +44,9 @@
   <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
 
   <?= js([
+    'assets/js/shopify.js',
     'assets/js/prism.js',
     'assets/js/lightbox.js',
-    'assets/js/shopify.js',
     'assets/js/flickity.min.js',
     'assets/js/index.js',
     '@auto'
